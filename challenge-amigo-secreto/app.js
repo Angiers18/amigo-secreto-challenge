@@ -21,6 +21,7 @@ function agregarAmigo(){
     }
 }
 
+
 function limpiar(){
     document.querySelector("#amigo").value = '';
     document.querySelector("#listaAmigos").innerHTML = '';
@@ -65,3 +66,10 @@ function sortearAmigo(){
     
     
 }
+
+let agregarNombre = document.querySelector("#amigo");
+agregarNombre.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        document.querySelector(".button-add").click();
+    }
+})
