@@ -1,4 +1,6 @@
 let amigos = [];
+let numeroSorteado = [];
+
 
 function agregarAmigo(){
 
@@ -28,11 +30,38 @@ function limpiar(){
 function listaDeAmigos(){
     let lista = document.querySelector("#listaAmigos");
     
+    
     for(let i = 0; i < amigos.length; i++){
-        let li = document.createElement('li');
+        li = document.createElement('li');
         li.textContent = amigos[i];
         lista.appendChild(li);
     }
+    
+   
 
     return lista;
+}
+
+function sortearAmigo(){
+
+    let seleccionado = amigos[Math.floor(Math.random() * amigos.length)];
+
+
+    if (numeroSorteado.length === amigos.length){
+        let resultado = document.querySelector("#resultado");
+        resultado.textContent = '¡Todos los amigos fueron sorteados!';
+        return;
+
+    } else if (numeroSorteado.includes(seleccionado)){
+        sortearAmigo();
+        return;
+
+    }else{
+        resultado.textContent = seleccionado;
+        numeroSorteado.push(seleccionado);
+        
+        return;
+    }
+    
+    
 }
