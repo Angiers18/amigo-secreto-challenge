@@ -16,9 +16,9 @@ La aplicación permite a los usuarios agregar nombres de amigos a una lista y re
 
 ## Tecnologías
 
-JavaScript
-HTML
-CSS
+- JavaScript
+- HTML
+- CSS
 
 ## Proyecto
 Este proyecto fue desarrollado para fortalecer la lógica de programación como parte del programa ONE (Oracle Next Education), organizado por Alura y Oracle.
